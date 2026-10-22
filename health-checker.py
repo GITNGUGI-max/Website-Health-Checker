@@ -14,7 +14,7 @@ def save_result(message):
     # Open the log file in append mode.
 # Python creates the file if it does not exist
 
-    with open("health-checks.logs", "a", encoding="utf-8") as log_file:
+    with open("health-checks.log", "a", encoding="utf-8") as log_file:
             # Write one line containing the hostname, status, and response time.
         log_file.write(
             f"{checked_at} | {message} \n"
