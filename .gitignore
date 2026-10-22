@@ -1,0 +1,6 @@
+# Generated log files
+*.log
+
+# Generated Python cache files
+__pycache__/
+*.pyc
