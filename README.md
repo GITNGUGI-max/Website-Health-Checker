@@ -21,35 +21,6 @@ HTTPS response status, and response time.
 The project uses Python's standard library, so no additional packages
 need to be installed.
 
-## How to run
-
-Open a terminal in the project folder and supply a hostname:
-
-```bash
-py health-checker.py ngugi-portfolio.duckdns.org
-```
-
-Enter only the hostname, without `https://` or a page path.
-
-To display usage instructions:
-
-```bash
-py health-checker.py --help
-```
-
-Open a terminal in the project folder and run:
-
-```bash
-py health-checker.py
-```
-
-When prompted, enter a hostname:
-
-```text
-ngugi-portfolio.duckdns.org
-```
-
-Enter only the hostname, without `https://` or a page path.
 
 ## Saved results
 
