@@ -4,6 +4,7 @@ from urllib.request import urlopen
 from time import perf_counter
 from urllib.error import HTTPError, URLError
 from datetime import datetime
+import argparse
 
 
 # define a reusable function for saving the log timestamp
@@ -25,7 +26,24 @@ def save_result(message):
 # input() returns what the user types as a string.
 # strip() removes spaces from the beginning and end.
 #
-hostname = input("Enter Your Website Hostname: ").strip()
+# hostname = input("Enter Your Website Hostname: ").strip()
+#create a parser for reading the command-line arguements.
+
+parser = argparse.ArgumentParser(
+    description="Check's a website DNs, HTTP status and response time."
+)
+
+#Require a hostname when one runs the prograxm
+parser.add_argument(
+    "hostname",
+    help="Website's hostname only, such as example.com"
+)
+
+#Read the arguments passed in the terminal.
+args = parser.parse_args()
+
+#Read the hostname passed and remove any whitespaces.
+hostname = args.hostname.strip()
 
 # An empty string is considered false in Python.
 # This also catches input containing only spaces because of strip().

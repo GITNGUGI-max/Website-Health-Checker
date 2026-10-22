@@ -5,7 +5,7 @@ HTTPS response status, and response time.
 
 ## Features
 
-- Accepts a hostname entered in the terminal.
+- Accepts a hostname as a command-line argument.
 - Rejects empty input.
 - Looks up an IPv4 address for the hostname.
 - Sends an HTTPS request.
@@ -22,6 +22,20 @@ The project uses Python's standard library, so no additional packages
 need to be installed.
 
 ## How to run
+
+Open a terminal in the project folder and supply a hostname:
+
+```bash
+py health-checker.py ngugi-portfolio.duckdns.org
+```
+
+Enter only the hostname, without `https://` or a page path.
+
+To display usage instructions:
+
+```bash
+py health-checker.py --help
+```
 
 Open a terminal in the project folder and run:
 
